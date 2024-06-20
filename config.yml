@@ -35,8 +35,21 @@ homebrew_cask_apps:
 
 
 dockitems_remove:
-  - TV
-  - Podcasts
   - 'App Store'
+  - 'Calendar'
+  - 'Contacts'
+  - 'Downloads'
+  - 'FaceTime'
   - 'Freeform'
+  - 'Launchpad'
+  - 'Mail'
+  - 'Maps'
+  - 'Messages'
   - 'Music'
+  - 'Notes'
+  - 'Photos'
+  - 'Podcasts'
+  - 'Reminders'
+  - 'Safari'
+  - 'System Settings'
+  - 'TV'
