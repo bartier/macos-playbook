@@ -16,3 +16,4 @@
   tasks:
     - name: Ensure Dock is running with latest changes
       shell: killall Dock
+      tags: ['dock']
