@@ -1,0 +1,37 @@
+homebrew_installed_packages:
+  - asdf
+  - cowsay
+  - curl
+  - docker-compose
+  - gh
+  - git
+  - jq
+  - netcat
+  - pre-commit
+
+
+homebrew_cask_apps:
+  - alfred
+  - azure-cli
+  - awscli
+  - dbeaver-community
+  - docker
+  - ferdium
+  - firefox
+  - google-chrome
+  - google-cloud-sdk
+  - iterm2
+  - microsoft-office
+  - obs
+  - openvpn-connect
+  - postman
+  - pycharm
+  - rectangle
+  - visual-studio-code
+  - wireshark
+
+
+dockitems_remove:
+  - TV
+  - Podcasts
+  - 'App Store'
