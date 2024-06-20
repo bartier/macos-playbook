@@ -1,5 +1,7 @@
 homebrew_installed_packages:
   - asdf
+  - awscli
+  - azure-cli
   - cowsay
   - curl
   - docker-compose
@@ -9,11 +11,9 @@ homebrew_installed_packages:
   - netcat
   - pre-commit
 
-
 homebrew_cask_apps:
   - alfred
-  - awscli
-  - azure-cli
+  - coconutbattery
   - dbeaver-community
   - docker
   - ferdium
@@ -28,6 +28,7 @@ homebrew_cask_apps:
   - postman
   - pycharm
   - rectangle
+  - the-unarchiver
   - utm
   - visual-studio-code
   - wireshark
@@ -37,3 +38,5 @@ dockitems_remove:
   - TV
   - Podcasts
   - 'App Store'
+  - 'Freeform'
+  - 'Music'

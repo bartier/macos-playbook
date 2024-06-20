@@ -1,1 +1,3 @@
 # macos-playbook
+
+`ansible-playbook main.yml --ask-become-pass`

@@ -8,6 +8,7 @@
   roles:
     - role: geerlingguy.mac.homebrew
       tags: ['homebrew']
+    #TODO: Add brew path
     - role: geerlingguy.mac.dock
       tags: ['dock']
     # - role: geerlingguy.dotfiles
