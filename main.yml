@@ -11,8 +11,6 @@
     #TODO: Add brew path
     - role: geerlingguy.mac.dock
       tags: ['dock']
-    - name: Restart Dock after geerlingguy.mac.dock execution to ensure settings are in place
-      ansible.builtin.shell: killall Dock
     # - role: geerlingguy.dotfiles
     #   tags: ['dotfiles']
   tasks:
