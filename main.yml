@@ -15,3 +15,6 @@
       ansible.builtin.shell: killall Dock
     # - role: geerlingguy.dotfiles
     #   tags: ['dotfiles']
+  tasks:
+    - name: Ensure Dock is running with latest changes
+    - shell: killall Dock
