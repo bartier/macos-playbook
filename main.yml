@@ -15,4 +15,4 @@
     #   tags: ['dotfiles']
   tasks:
     - name: Ensure Dock is running with latest changes
-    - shell: killall Dock
+      shell: killall Dock
