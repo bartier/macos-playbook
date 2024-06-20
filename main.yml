@@ -16,10 +16,12 @@
     #   tags: ['dotfiles']
   tasks:
     - name: Setup Homewbrew
-      include_role: geerlingguy.mac.homebrew
+      include_role:
+        name: geerlingguy.mac.homebrew
 
     - name: Setup Dock
-      include_role: geerlingguy.mac.dock
+      include_role:
+        name: geerlingguy.mac.dock
 
     - name: Ensure Dock is running with latest changes
       shell: killall Dock
