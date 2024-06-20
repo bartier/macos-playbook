@@ -12,8 +12,8 @@ homebrew_installed_packages:
 
 homebrew_cask_apps:
   - alfred
-  - azure-cli
   - awscli
+  - azure-cli
   - dbeaver-community
   - docker
   - ferdium
@@ -22,11 +22,13 @@ homebrew_cask_apps:
   - google-cloud-sdk
   - iterm2
   - microsoft-office
+  - ngrok
   - obs
   - openvpn-connect
   - postman
   - pycharm
   - rectangle
+  - utm
   - visual-studio-code
   - wireshark
 
