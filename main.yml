@@ -23,6 +23,18 @@
         fi
       tags: ohmyzsh
 
+    - name: Install zinit
+      ansible.builtin.shell: |
+        bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
+      tags: zinit
+
+    - name: Install command-time plugin
+      ansible.builtin.shell: |
+        if [ ! -d "~/.oh-my-zsh/custom/plugins/command-time" ]; then
+          git clone https://github.com/popstas/zsh-command-time.git ~/.oh-my-zsh/custom/plugins/command-time
+        fi
+      tags: command-time
+
     - name: Setup Dock
       include_role:
         name: geerlingguy.mac.dock
