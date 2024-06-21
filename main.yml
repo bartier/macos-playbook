@@ -9,15 +9,28 @@
     - name: Setup Homewbrew
       include_role:
         name: geerlingguy.mac.homebrew
+      tags: homebrew
+
+    - name: Setup dotfiles
+      include_role:
+        name: geerlingguy.dotfiles
+      tags: dotfiles
+
+    - name: Install Oh My ZSH
+      ansible.builtin.shell: |
+        if [ ! -d "~.oh-my-zsh/" ]; then
+          sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh) --keep-zshrc"
+        fi
+      tags: ohmyzsh
 
     - name: Setup Dock
       include_role:
         name: geerlingguy.mac.dock
       tags: ['dock']
 
-    - name: Ensure Dock is running with latest changes
-      shell: killall Dock
-      tags: ['dock']
+    # - name: Ensure Dock is running with latest changes
+    #   shell: killall Dock
+    #   tags: ['dock']
 
     # - name: Run .osx dotfile
     #   command: "{{ osx_script }}"

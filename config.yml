@@ -33,6 +33,16 @@ homebrew_cask_apps:
   - visual-studio-code
   - wireshark
 
+dotfiles_repo: https://github.com/bartier/dotfiles.git
+dotfiles_repo_accept_hostkey: true
+dotfiles_repo_local_destination: ~/Development/Personal/GitHub/dotfiles
+dotfiles_files:
+  - .zshrc
+  - .gitignore
+  - .inputrc
+  - .osx
+  - .vimrc
+
 
 dockitems_remove:
   - 'App Store'
