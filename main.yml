@@ -5,15 +5,6 @@
   vars_files:
     - config.yml
 
-  # roles:
-    # - role: geerlingguy.mac.homebrew
-    #   tags: ['homebrew']
-
-    #TODO: Maybe add Brew in PATH
-    # - role: geerlingguy.mac.dock
-    #   tags: ['dock']
-    # - role: geerlingguy.dotfiles
-    #   tags: ['dotfiles']
   tasks:
     - name: Setup Homewbrew
       include_role:
