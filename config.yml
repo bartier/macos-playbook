@@ -34,6 +34,7 @@ homebrew_cask_apps:
   - wireshark
 
 dotfiles_repo: https://github.com/bartier/dotfiles.git
+dotfiles_repo_version: main
 dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: ~/Development/Personal/GitHub/dotfiles
 dotfiles_files:
