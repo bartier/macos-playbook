@@ -39,7 +39,6 @@ dotfiles_repo_local_destination: ~/Development/Personal/GitHub/dotfiles
 dotfiles_files:
   - .zshrc
   - .gitignore
-  - .inputrc
   - .osx
   - .vimrc
 
