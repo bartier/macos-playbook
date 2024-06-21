@@ -53,3 +53,5 @@ dockitems_remove:
   - 'Safari'
   - 'System Settings'
   - 'TV'
+
+osx_script: "~/.osx"

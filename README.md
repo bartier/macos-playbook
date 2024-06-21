@@ -1,3 +1,7 @@
 # macos-playbook
 
-`ansible-playbook main.yml --ask-become-pass`
+Steps:
+```
+ansible-galaxy install -r requirements.txt
+ansible-playbook main.yml --ask-become-pass
+```

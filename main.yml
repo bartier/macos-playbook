@@ -13,7 +13,12 @@
     - name: Setup Dock
       include_role:
         name: geerlingguy.mac.dock
+      tags: ['dock']
 
     - name: Ensure Dock is running with latest changes
       shell: killall Dock
       tags: ['dock']
+
+    # - name: Run .osx dotfile
+    #   command: "{{ osx_script }}"
+    #   become: yes
