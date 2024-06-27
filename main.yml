@@ -51,6 +51,22 @@
         name: geerlingguy.mac.dock
       tags: dock
 
+    - name: Install asdf plugins
+      ansible.builtin.shell: |
+        asdf plugin-add python
+        asdf plugin-add terraform https://github.com/asdf-community/asdf-hashicorp.git
+        asdf plugin-add kubectl https://github.com/asdf-community/asdf-kubectl.git
+        asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+        asdf plugin add golang https://github.com/asdf-community/asdf-golang.git
+
+        asdf install python latest
+        asdf install terraform latest
+        asdf install kubectl latest
+        asdf install nodejs latest
+        asdf install golang latest
+      tags: asdf-plugins
+
     - name: Run .osx dotfile
       command: "{{ osx_script }}"
       become: yes
+      tags: osx
