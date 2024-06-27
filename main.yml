@@ -42,15 +42,15 @@
         fi
       tags: zsh-autosuggestions
 
+    - name: Source zshrc file to allow the current configuration to be used by next steps.
+      shell: source ~.zshrc
+      tags: source-zshrc
+
     - name: Setup Dock
       include_role:
         name: geerlingguy.mac.dock
-      tags: ['dock']
+      tags: dock
 
-    # - name: Ensure Dock is running with latest changes
-    #   shell: killall Dock
-    #   tags: ['dock']
-
-    # - name: Run .osx dotfile
-    #   command: "{{ osx_script }}"
-    #   become: yes
+    - name: Run .osx dotfile
+      command: "{{ osx_script }}"
+      become: yes
