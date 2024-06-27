@@ -43,7 +43,7 @@
       tags: zsh-autosuggestions
 
     - name: Source zshrc file to allow the current configuration to be used by next steps.
-      shell: source ~.zshrc
+      shell: source ~/.zshrc
       tags: source-zshrc
 
     - name: Setup Dock
