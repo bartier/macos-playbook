@@ -2,6 +2,6 @@
 
 Steps:
 ```
-ansible-galaxy install -r requirements.txt
+ansible-galaxy install -r requirements.yml
 ansible-playbook main.yml --ask-become-pass
 ```

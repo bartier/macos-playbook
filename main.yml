@@ -35,6 +35,13 @@
         fi
       tags: command-time
 
+    - name: Install zsh-autosuggestions
+      ansible.builtin.shell: |
+        if [ ! -d "~/.oh-my-zsh/custom/plugins/command-time" ]; then
+          git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+        fi
+      tags: zsh-autosuggestions
+
     - name: Setup Dock
       include_role:
         name: geerlingguy.mac.dock
