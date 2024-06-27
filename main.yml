@@ -43,7 +43,10 @@
       tags: zsh-autosuggestions
 
     - name: Source zshrc file to allow the current configuration to be used by next steps.
-      shell: source ~/.zshrc
+      ansible.builtin.shell:
+      args:
+        cmd: source ~/.zshrc
+        executable: /bin/zsh
       tags: source-zshrc
 
     - name: Setup Dock
