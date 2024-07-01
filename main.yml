@@ -44,12 +44,12 @@ environment:
         fi
       tags: zsh-autosuggestions
 
-    # - name: Source zshrc file to allow the current configuration to be used by next steps.
-    #   ansible.builtin.shell:
-    #   args:
-    #     cmd: source ~/.zshrc
-    #     executable: /bin/zsh
-    #   tags: source-zshrc
+    - name: Fix PATH to run docktuil
+      ansible.builtin.shell:
+      args:
+        cmd: export PATH=$PATH:/opt/homebrew/bin:/opt/homebrew/sbin
+        executable: /bin/zsh
+      tags: source-zshrc
 
     - name: Setup Dock
       include_role:
