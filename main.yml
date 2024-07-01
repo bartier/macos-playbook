@@ -4,6 +4,8 @@
 
   vars_files:
     - config.yml
+environment:
+  PATH: "/opt/homebrew/bin:/opt/homebrew/sbin:{{ ansible_env.PATH }}"
 
   tasks:
     - name: Setup Homewbrew
@@ -50,8 +52,6 @@
     #   tags: source-zshrc
 
     - name: Setup Dock
-      environment:
-        PATH: "/opt/homebrew/bin:/opt/homebrew/sbin:{{ ansible_env.PATH }}"
       include_role:
         name: geerlingguy.mac.dock
       tags: dock
