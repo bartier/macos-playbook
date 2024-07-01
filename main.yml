@@ -4,8 +4,6 @@
 
   vars_files:
     - config.yml
-environment:
-  PATH: "/opt/homebrew/bin:/opt/homebrew/sbin:{{ ansible_env.PATH }}"
 
   tasks:
     - name: Setup Homewbrew
