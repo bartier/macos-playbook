@@ -2,7 +2,7 @@
 - name: Configure localhost
   hosts: localhost
   environment:
-    BASH_ENV: "~/.profile"
+    PATH: "/opt/homebrew/bin:/opt/homebrew/sbin:{{ ansible_env.PATH }}"
 
   vars_files:
     - config.yml
@@ -20,15 +20,10 @@
 
     - name: Install Oh My ZSH
       ansible.builtin.shell: |
-        if [ ! -d "~.oh-my-zsh/" ]; then
+        if [ ! -d "~/.oh-my-zsh/" ]; then
           sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh) --keep-zshrc"
         fi
       tags: ohmyzsh
-
-    - name: Install zinit
-      ansible.builtin.shell: |
-        bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
-      tags: zinit
 
     - name: Install command-time plugin
       ansible.builtin.shell: |
@@ -39,24 +34,18 @@
 
     - name: Install zsh-autosuggestions
       ansible.builtin.shell: |
-        if [ ! -d "~/.oh-my-zsh/custom/plugins/command-time" ]; then
+        if [ ! -d "~/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ]; then
           git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
         fi
       tags: zsh-autosuggestions
 
-    # - name: Ensure .profile exists
-    #   copy:
-    #     content: ""
-    #     dest: "/Users/{{ lookup('env', 'USER') }}/.profile"
-    #     force: no
-
-    - name: Ensure brew path in ~/.profile
-      lineinfile:
-        create: true
-        state: present
-        path: "/Users/{{ lookup('env', 'USER') }}/.profile"
-        line: eval "$(/opt/homebrew/bin/brew shellenv)"
-      tags: ['homebrew']
+    # - name: Ensure brew path in ~/.profile
+    #   lineinfile:
+    #     create: true
+    #     state: present
+    #     path: "/Users/{{ lookup('env', 'USER') }}/.profile"
+    #     line: eval "$(/opt/homebrew/bin/brew shellenv)"
+    #   tags: ['homebrew']
 
     - name: Setup Dock
       include_role:
