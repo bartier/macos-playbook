@@ -61,5 +61,4 @@
 
     - name: Run .osx dotfile
       command: "{{ osx_script }}"
-      become: yes
       tags: osx
