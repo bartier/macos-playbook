@@ -39,14 +39,6 @@
         fi
       tags: zsh-autosuggestions
 
-    # - name: Ensure brew path in ~/.profile
-    #   lineinfile:
-    #     create: true
-    #     state: present
-    #     path: "/Users/{{ lookup('env', 'USER') }}/.profile"
-    #     line: eval "$(/opt/homebrew/bin/brew shellenv)"
-    #   tags: ['homebrew']
-
     - name: Setup Dock
       include_role:
         name: geerlingguy.mac.dock
