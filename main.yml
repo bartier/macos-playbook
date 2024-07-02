@@ -32,7 +32,7 @@
         fi
       tags: command-time
 
-    - name: Install zsh-autosuggestions
+    - name: Install zsh-autosuggestions plugin
       ansible.builtin.shell: |
         if [ ! -d "~/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ]; then
           git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
