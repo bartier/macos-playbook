@@ -76,5 +76,5 @@
 
     - name: Run .osx dotfile
       ansible.builtin.shell: |
-        chmod +x {{ osx_script }} && {{ osx_script }}
+        {{ osx_script }}
       tags: osx
