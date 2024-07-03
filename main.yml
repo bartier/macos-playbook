@@ -20,22 +20,37 @@
 
     - name: Install Oh My ZSH
       ansible.builtin.shell: |
-        if [ ! -d "~/.oh-my-zsh/" ]; then
+        if [ ! -d "/Users/$USER/.oh-my-zsh/" ]; then
           sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh) --keep-zshrc"
         fi
       tags: ohmyzsh
 
     - name: Install command-time plugin
       ansible.builtin.shell: |
-        if [ ! -d "~/.oh-my-zsh/custom/plugins/command-time" ]; then
-          git clone https://github.com/popstas/zsh-command-time.git ~/.oh-my-zsh/custom/plugins/command-time
+        if [ ! -d "/Users/$USER/.oh-my-zsh/custom/plugins/command-time" ]; then
+          git clone https://github.com/popstas/zsh-command-time.git /Users/$USER/.oh-my-zsh/custom/plugins/command-time
         fi
       tags: command-time
 
     - name: Install zsh-autosuggestions plugin
       ansible.builtin.shell: |
-        if [ ! -d "~/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ]; then
-          git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+        if [ ! -d "/Users/$USER/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ]; then
+          git clone https://github.com/zsh-users/zsh-autosuggestions /Users/$USER/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+        fi
+      tags: zsh-autosuggestions
+
+    - name: Install zsh-you-should-use plugin
+      ansible.builtin.shell: |
+        if [ ! -d "/Users/$USER/.oh-my-zsh/custom/plugins/you-should-use" ]; then
+          git clone https://github.com/MichaelAquilina/zsh-you-should-use.git /Users/$USER/.oh-my-zsh/custom/plugins/you-should-use
+        fi
+      tags: zsh-autosuggestions
+
+
+    - name: Install zsh-syntax-highlighting plugin
+      ansible.builtin.shell: |
+        if [ ! -d "/Users/$USER/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" ]; then
+          git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /Users/$USER/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
         fi
       tags: zsh-autosuggestions
 
@@ -59,6 +74,7 @@
         asdf install golang latest
       tags: asdf-plugins
 
+    #TODO: Fix
     - name: Run .osx dotfile
-      command: "{{ osx_script }}"
+      command: "chmod +x {{ osx_script }} && {{ osx_script }}"
       tags: osx
