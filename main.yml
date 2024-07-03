@@ -75,5 +75,6 @@
       tags: asdf-plugins
 
     - name: Run .osx dotfile
-      command: "chmod +x {{ osx_script }} && {{ osx_script }}"
+      ansible.builtin.shell: |
+        chmod +x {{ osx_script }} && {{ osx_script }}
       tags: osx
