@@ -74,7 +74,6 @@
         asdf install golang latest
       tags: asdf-plugins
 
-    #TODO: Fix
     - name: Run .osx dotfile
       command: "chmod +x {{ osx_script }} && {{ osx_script }}"
       tags: osx
