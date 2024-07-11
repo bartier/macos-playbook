@@ -13,6 +13,7 @@ homebrew_installed_packages:
   - pipenv
 
 homebrew_cask_apps:
+  - jetbrains-toolbox
   - alfred
   - arc
   - bitwarden
