@@ -10,6 +10,7 @@ homebrew_installed_packages:
   - jq
   - netcat
   - pre-commit
+  - pipenv
 
 homebrew_cask_apps:
   - alfred
