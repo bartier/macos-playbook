@@ -11,12 +11,11 @@ homebrew_installed_packages:
   - netcat
   - pre-commit
   - pipenv
+  - cloud-sql-proxy
 
 homebrew_cask_apps:
-  - jetbrains-toolbox
   - alfred
   - arc
-  - bitwarden
   - dbeaver-community
   - docker
   - ferdium
@@ -29,7 +28,8 @@ homebrew_cask_apps:
   - obs
   - openvpn-connect
   - postman
-  - pycharm
+  - pycharm-ce
+  - fleet
   - rectangle
   - the-unarchiver
   - utm
