@@ -30,7 +30,6 @@ homebrew_cask_apps:
   - openvpn-connect
   - postman
   - pycharm-ce
-  - fleet
   - rectangle
   - the-unarchiver
   - utm
