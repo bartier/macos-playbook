@@ -15,6 +15,7 @@ homebrew_installed_packages:
   - postgresql
 
 homebrew_cask_apps:
+  - notunes
   - alfred
   - arc
   - dbeaver-community
